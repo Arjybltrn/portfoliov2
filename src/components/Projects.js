@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+import Nav from './Nav'
 
 const projects = [
         {
@@ -37,38 +38,21 @@ const projects = [
 
 
 
-export function Projects() {
-  return (
-    <div>Projects</div>
-  )
-}
 
 
-// export function Projects({ data, renderItem, renderEmpty}) {
-//     return !data.length ? renderEmpty : 
-//         <div>
-//             <nav>
-//                 <Link to="/">Home</Link>
-//                 <Link to="/about">About Me</Link>
-//                 <Link to="/projects">Projects</Link>
-//                 <Link to="/experiences">Professional Experiences</Link>
-//             </nav>
-//             <h1>Projects</h1>
-
-//             <ul>
-//                {data.map((item) => 
-//                 <li key={item.name}>
-//                     {renderItem(item)}
-//                 </li>
-//                )}
-//             </ul>  
-//         </div>    
-// }
+    export function Projects() {
+        return (
+          <div>
+             <Nav />
+            <h1>Projects</h1>
+        </div>
+        )
+      }
 
 
 
-// {/* <Projects
+//  <Projects
 //       data={projects} // this is the hardcode array of objects
 //       renderEmpty={<p>this list is empty</p>} // passing along jsx when the list is empty
 //       renderItem={item => <>{item.projectTitle} - {item.desc}</>} // this is passing along this fragment when data is present
-//     /> */}
+//     /> 

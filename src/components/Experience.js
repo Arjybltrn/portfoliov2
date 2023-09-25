@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Nav from './Nav'
 
 
 const exp = [ 
@@ -62,22 +64,12 @@ const exp = [
     
     ]
 
-// export function Experiences(props) {
-//     return (
-//         <div>
-//             <nav>
-//                 <Link to="/">Home</Link>
-//                 <Link to="/about">About Me</Link>
-//                 <Link to="/projects">Projects</Link>
-//                 <Link to="/experiences">Professional Experience</Link>
-//             </nav>
-//             <h1>Professional Experience</h1>
-//         </div>
-//     );
-// }
 
-export function Experience() {
-  return (
-    <div>Experience</div>
-  )
-}
+    export function Experience() {
+        return (
+          <div>
+             <Nav />
+            <h1>Professional Experiences</h1>
+        </div>
+        )
+      }
