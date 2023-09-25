@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { App, Experiences, About, Projects } from './App';
+import { About } from './components/About';
+import { Experience } from './components/Experience'; 
+import { Projects } from './components/Projects'
+import { App } from './App'
+
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 // import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
@@ -34,7 +38,7 @@ root.render(
     <Route path="/" element={ <App /> }/>
     <Route path="/about" element={<About />} />
     <Route path="/projects" element={<Projects />}/>
-    <Route path="/experiences" element={<Experiences />} />
+    <Route path="/experiences" element={<Experience />} />
   </Routes>
  </BrowserRouter>
 );
