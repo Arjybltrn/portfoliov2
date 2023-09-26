@@ -1,18 +1,20 @@
 import React from 'react'
-import { Link, Outlet } from "react-router-dom"
 import Nav from './Nav'
+import Footer from './Footer'
 
 
-const about = "Skilled full-stack developer with expertise in HTML, CSS, JavaScript, React, Python, Django, Express, PostgreSQL, MongoDB, Node.js, and Git. Holds Graduate Certificates in Software Engineering and Home Construction Renovation, and an Advanced Diploma in Computer Science. "
-
+const about = "I'm a software engineer who's all about that hands-on, DIY ethos – just like my background in home renovation. I've got the chops in various programming languages and frameworks, and I really thrive when I'm part of a team. My knack for catching the little things and my experience keeping projects on track help me come up with solutions that are both sleek and efficient. I'm always up for learning something new, and I make sure to stay in the loop with the latest tech trends. Let's connect and see how we can team up to make some serious waves in the software engineering world!"
 
 
 export function About() {
     return (
-      <div>
-         <Nav />
-        <h1>professional summary</h1>
+    <div>
+        <Nav />
         <p>{about}</p>
+        <Footer />
     </div>
+
+    
+
     )
   }

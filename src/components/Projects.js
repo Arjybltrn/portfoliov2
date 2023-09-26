@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
+import Footer from './Footer'
 
 const projects = [
         {
@@ -71,6 +72,7 @@ const projects = [
                     {item.ss_img}
                     </div>
                 </div>} />
+                <Footer />
         </div>
         )
       }

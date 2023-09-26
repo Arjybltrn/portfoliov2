@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-
+import Footer from './Footer'
 
 const exp = [ 
         {
@@ -92,6 +92,7 @@ const exp = [
                    <h3>{item.location}</h3> 
                    <h3> {item.date}</h3>
                 </div>} />
+                <Footer />
         </div>
         )
       }

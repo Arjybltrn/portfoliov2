@@ -38,7 +38,7 @@ root.render(
     <Route path="/" element={ <App /> }/>
     <Route path="/about" element={<About />} />
     <Route path="/projects" element={<Projects />}/>
-    <Route path="/experiences" element={<Experience />} />
+    <Route path="/experience" element={<Experience />} />
   </Routes>
  </BrowserRouter>
 );
