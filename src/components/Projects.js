@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Nav from './Nav'
 
 const projects = [
@@ -29,7 +28,7 @@ const projects = [
         },
         {
             projectTitle: "flowerbox",
-            desc: "Your online destinatiiioin for exquisite floral arrangements and fresh blooms. Discover beauty, elegance, and joy in every petal.",
+            desc: "Your online destination for exquisite floral arrangements and fresh blooms. Discover beauty, elegance, and joy in every petal.",
             tech_stack: [ "React", "Node.js", "CSS" ],
             ss_img: ""
         },
@@ -37,22 +36,48 @@ const projects = [
 
 
 
-
+    function ProjectsList  ({ data, renderItem, renderEmpty }) {
+        return !data.length ? ( renderEmpty
+            ) : ( 
+                <div>{data.map((item) => (
+                    <p key={item.projectTitle}>
+                        {renderItem(item)}
+                    </p>
+                ))}    
+                </div>
+            )
+    }
 
 
     export function Projects() {
+
+        
+        
+       
         return (
           <div>
              <Nav />
             <h1>Projects</h1>
+            <ProjectsList 
+                data={projects}
+                renderEmpty={<p>this list is empty</p>}
+                renderItem={item => 
+                <div className='projects'>
+                    <h1>{item.projectTitle} </h1> 
+                    <p>{item.desc}</p>
+                    <h2>Skills:</h2> 
+                    {item.tech_stack}
+                    <div className='cardImage'>
+                    {item.ss_img}
+                    </div>
+                </div>} />
         </div>
         )
       }
 
 
 
-//  <Projects
-//       data={projects} // this is the hardcode array of objects
-//       renderEmpty={<p>this list is empty</p>} // passing along jsx when the list is empty
-//       renderItem={item => <>{item.projectTitle} - {item.desc}</>} // this is passing along this fragment when data is present
-//     /> 
+
+      // let ts = [ "JavaScript", "HTML", "CSS", "AJAX" ]
+       
+        

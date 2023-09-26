@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Nav from './Nav'
 
 
@@ -64,12 +63,37 @@ const exp = [
     
     ]
 
+    function ExperienceList  ({ data, renderItem, renderEmpty }) {
+        return !data.length ? ( renderEmpty
+            ) : ( 
+                <div>{data.map((item) => (
+                    <p key={item.companyName}>
+                        {renderItem(item)}
+                    </p>
+                ))}    
+                </div>
+            )
+    }
 
     export function Experience() {
         return (
           <div>
              <Nav />
-            <h1>Professional Experiences</h1>
+             <h1>Professional Experiences</h1>
+            <ExperienceList 
+                data={exp}
+                renderEmpty={<p>this list is empty</p>}
+                renderItem={item => 
+                
+                <div className='job'>
+                    <h1>{item.jobTitle} </h1>
+                   <h2>{item.companyName} </h2> 
+                    <p>{item.jobDesc}</p>
+                   <h3>{item.location}</h3> 
+                   <h3> {item.date}</h3>
+                </div>} />
         </div>
         )
       }
+
+   
