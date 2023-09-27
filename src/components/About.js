@@ -8,7 +8,7 @@ const about = "I'm a software engineer who's all about that hands-on, DIY ethos 
 
 export function About() {
     return (
-    <div>
+    <div className='App'>
         <Nav />
         <p>{about}</p>
         <Footer />

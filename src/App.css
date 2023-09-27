@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+:root {
+  --primary-color: #ffa15e; /* Moonrise Kingdom orange */
+  --secondary-color: #5a9b88; /* Moonrise Kingdom green */
+  --background-color: #f4e4cd; /* Creamy background */
+  --nav-footer-height: 80px; /* Common height for nav and footer */
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: var(--nav-footer-height) 1fr var(--nav-footer-height); /* Three rows: top nav, content, footer */
+  grid-template-columns: 1fr; /* Single column */
+  height: 100vh; /* Make sure the grid covers the entire viewport height */
+}
+
+nav {
+  grid-row: 1; /* Place the nav in the first row */
+  grid-column: 1; /* Place the nav in the first column */
+  height: var(--nav-footer-height); /* Set the height of the nav */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.name{
+  grid-row: 2; /* Place name and title in the second row */
+  grid-column: 1; /* Place name and title in the first column */
+  text-align: center;
+  padding: 20px;
+}
+
+.footer li{
+  grid-row: 3; /* Place the footer in the third row */
+  grid-column: 1; /* Place the footer in the first column */
+  height: var(--nav-footer-height); /* Set the height of the footer */
+  text-align: center;
+  color: white;
+  padding: 10px;
+  display: inline;
+}
+
+
+
+
+
+

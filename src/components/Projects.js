@@ -56,7 +56,7 @@ const projects = [
         
        
         return (
-          <div>
+          <div className='App'>
              <Nav />
             <h1>Projects</h1>
             <ProjectsList 
@@ -79,7 +79,5 @@ const projects = [
 
 
 
-
-      // let ts = [ "JavaScript", "HTML", "CSS", "AJAX" ]
        
         

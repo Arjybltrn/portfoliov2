@@ -41,7 +41,7 @@ const exp = [
         {
             companyName: "G Hirsch Renovations",
             jobTitle: "Apprentice Carpenter",
-            location: "Toronto",
+            location: "Toronto, ON",
             jobDesc: [ 
                         "Proficiently organized job sites, efficiently gathering tools and materials, while upholding high standards of cleanliness and safety.",
                         "Aided carpenters in structure installation, displayed problem-solving skills, and maintained workspace.", 
@@ -51,8 +51,8 @@ const exp = [
         },
         {
             companyName: "UNIQLO Canada",
-            jobTitle: "Assistant Store Manager",
-            location: "Toronto",
+            jobTitle: "Assistant Manager",
+            location: "Toronto, ON",
             jobDesc: [ 
                         "Successfully achieved daily store sales target of 100% through strategic planning and effective sales management.",
                         "Oversaw store operations, prioritizing safety and excellent customer service.", 
@@ -63,38 +63,59 @@ const exp = [
     
     ]
 
-    function ExperienceList  ({ data, renderItem, renderEmpty }) {
-        return !data.length ? ( renderEmpty
-            ) : ( 
-                <div>{data.map((item) => (
-                    <p key={item.companyName}>
-                        {renderItem(item)}
-                    </p>
-                ))}    
-                </div>
-            )
-    }
+    // function ExperienceList  ({ data, renderItem, renderEmpty }) {
+    //     return !data.length ? ( renderEmpty
+    //         ) : ( 
+    //             <div>{data.map((item) => (
+    //                 <p key={item.companyName}>
+    //                     {renderItem(item)}
+    //                 </p>
+    //             ))}    
+    //             </div>
+    //         )
+    // }
 
-    export function Experience() {
-        return (
-          <div>
-             <Nav />
-             <h1>Professional Experiences</h1>
-            <ExperienceList 
-                data={exp}
-                renderEmpty={<p>this list is empty</p>}
-                renderItem={item => 
+    // export function Experience() {
+    //     return (
+    //       <div>
+    //          <Nav />
+    //          <h1>Professional Experiences</h1>
+    //         <ExperienceList 
+    //             data={exp}
+    //             renderEmpty={<p>this list is empty</p>}
+    //             renderItem={item => 
                 
-                <div className='job'>
-                    <h1>{item.jobTitle} </h1>
-                   <h2>{item.companyName} </h2> 
-                    <p>{item.jobDesc}</p>
-                   <h3>{item.location}</h3> 
-                   <h3> {item.date}</h3>
-                </div>} />
-                <Footer />
-        </div>
-        )
-      }
+    //             <div className='job'>
+    //                 <h1>{item.jobTitle} </h1>
+    //                <h2>{item.companyName} </h2> 
+    //                 <p>{item.jobDesc}</p>
+    //                <h3>{item.location}</h3> 
+    //                <h3> {item.date}</h3>
+    //             </div>} />
+    //             <Footer />
+    //     </div>
+    //     )
+    //   }
 
    
+    export function Experience() {
+        return (
+          <div className='App'>
+            <Nav />
+            {exp.map((experience, index) => (
+              <div key={index}>
+                <h3>{experience.companyName}</h3>
+                <h4>{experience.jobTitle}</h4>
+                <h5>{experience.location}</h5>
+                <ul>
+                  {experience.jobDesc.map((desc, descIndex) => (
+                    <li key={descIndex}>{desc}</li>
+                  ))}
+                </ul>
+                <p>{experience.date}</p>
+              </div>
+            ))}
+            <Footer />
+          </div>
+        );
+      }

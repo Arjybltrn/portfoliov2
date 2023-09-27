@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import '../css/Footer.css'
 
 function Footer(props) {
     return (
         <footer>
-        <ul>
+        <ul className='footer'>
           <li>
             <a href="https://github.com/Arjybltrn" target="_blank" rel="noopener noreferrer">
               <FaGithub className="footer-icon" size={25} />

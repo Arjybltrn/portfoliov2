@@ -1,0 +1,31 @@
+/* Footer.css */
+.footer {
+    position: fixed; /* Fixed position to keep it at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(44,98,78);
+    text-align: center;
+    padding: 20px 0; /* 20px padding top and bottom, 0 padding left and right */
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; /* Display the icons inline */
+  }
+  
+  .footer ul li {
+    display: inline;
+    margin: 0 10px; /* Add spacing between icons */
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: rgb(44,98,78);
+  }
+  
+  .footer-icon {
+    vertical-align: middle; /* Center the icons vertically */
+  }
+  

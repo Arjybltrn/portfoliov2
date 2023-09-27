@@ -1,6 +1,8 @@
 import './App.css';
 import { Link } from "react-router-dom"
 import Footer from './components/Footer'
+import Nav from './components/Nav'
+import './css/Nav.css'
 
 import React from 'react';
 
@@ -9,20 +11,24 @@ import React from 'react';
 
 export function App() {
     return (
-        <div>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About Me</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/experience">Professional Experience</Link>
-            </nav>
+        <div className='App'>
+            <Nav />
+            
             <div className="name">
-                <h1>Arjay Beltran</h1>
-            </div>
-            <div className='title'>
+                <h1>Hello. I'm Arjay </h1>
                 <h2>Software Engineer</h2>
             </div>
-            <Footer />
+
+
+            <div className='title'>
+                
+            </div>
+
+
+            <div className='footer'>
+                <Footer />
+            </div>
+            
         </div>
     );
 }
