@@ -5,7 +5,7 @@ import '../css/Nav.css'; // Import the CSS file
 
 export default function Nav() {
   return (
-    <div>
+    <div className='navbar'>
       <nav className='navbar'>
         <NavLink to="/" exact activeClassName='active'>
           / home 

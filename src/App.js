@@ -12,22 +12,21 @@ import React from 'react';
 export function App() {
     return (
         <div className='App'>
-            <Nav />
+           
+           <div className='navbar'>
+                <Nav />
+            </div>
             
             <div className="name">
                 <h1>Hello. I'm Arjay </h1>
                 <h2>Software Engineer</h2>
             </div>
-
-
-            <div className='title'>
-                
-            </div>
-
-
+        
+            
             <div className='footer'>
                 <Footer />
             </div>
+            
             
         </div>
     );

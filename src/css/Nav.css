@@ -4,17 +4,40 @@
     padding: 20px;
   }
   
-  .navbar a {
+.navbar a {
     text-decoration: none;
     color: rgb(222,181,136);
     margin: 0 20px;
     padding: 5px 10px;
     border: 1px solid transparent;
     border-radius: 4px;
-  }
-  
-  .navbar a.active {
+    }
+
+.navbar a.active {
     background-color: rgb(44,98,78);
     color: rgb(222,181,136);
-  }
+    }
+
+
+navbar {
+    grid-row-start: 1 ;
+    grid-column: 1 / -4; 
+    height: var(--nav-footer-height); /* Set the height of the nav */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    }
+
+
   
+
+  
+  
+  :root {
+    --primary-color: #ffa15e; /* Moonrise Kingdom orange */
+    --secondary-color: #5a9b88; /* Moonrise Kingdom green */
+    --background-color: #f4e4cd; /* Creamy background */
+    --nav-footer-height: 80px; /* Common height for nav and footer */
+  }

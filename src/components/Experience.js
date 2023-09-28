@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import Footer from './Footer'
+import '../css/Nav.css'
 
 const exp = [ 
         {
@@ -101,7 +102,11 @@ const exp = [
     export function Experience() {
         return (
           <div className='App'>
-            <Nav />
+
+            <div className='navbar'>
+              <Nav />
+            </div>
+           
             {exp.map((experience, index) => (
               <div key={index}>
                 <h3>{experience.companyName}</h3>
@@ -115,7 +120,10 @@ const exp = [
                 <p>{experience.date}</p>
               </div>
             ))}
-            <Footer />
+            <div className='footer'>
+              <Footer/>
+            </div>
+          
           </div>
         );
       }
